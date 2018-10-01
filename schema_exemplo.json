@@ -1,0 +1,75 @@
+{
+  "$id": "http://52.191.254.38/desafio/produtos",
+  "type": "array",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "items": {
+    "$id": "http://52.191.254.38/desafio/produtos/items",
+    "type": "object",
+    "properties": {
+      "id": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/id",
+        "type": "string",
+        "title": "Id",
+        "default": "",
+        "examples": [
+          "1"
+        ]
+      },
+      "nome": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/nome",
+        "type": "string",
+        "title": "Nome",
+        "default": "",
+        "examples": [
+          "Chocolate"
+        ]
+      },
+      "descricao": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/descricao",
+        "type": "string",
+        "title": "Descricao",
+        "default": "",
+        "examples": [
+          "Chocolate ao leite"
+        ]
+      },
+      "valor_venda": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/valor_venda",
+        "type": "string",
+        "title": "Valor_venda",
+        "default": "",
+        "examples": [
+          "2.00"
+        ]
+      },
+      "estoque": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/estoque",
+        "type": "string",
+        "title": "Estoque",
+        "default": "",
+        "examples": [
+          "10.00"
+        ]
+      },
+      "endereco_foto": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/endereco_foto",
+        "type": "string",
+        "title": "Endereco foto",
+        "default": "",
+        "examples": [
+          "teste"
+        ]
+      },
+      "codigo_barras": {
+        "$id": "http://52.191.254.38/desafio/produtos/items/properties/codigo_barras",
+        "type": "string",
+        "title": "Codigo barras",
+        "default": "",
+        "examples": [
+          "78912344412"
+        ]
+      }
+    }
+  }
+}
