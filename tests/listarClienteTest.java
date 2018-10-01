@@ -97,6 +97,33 @@ public class listarClienteTest {
 
     }
 
+    @Test
+    public void listarClienteLimpaBase() {
+
+        //Acessando o Menu de Inclusão
+        navegador.findElement(By.linkText("QA")).click();
+        navegador.findElement(By.linkText("Clientes")).click();
+        navegador.findElement(By.linkText("Listar")).click();
+
+        // Verificar carregamento da tela
+        navegador.findElement(By.cssSelector("input.btn-primary:nth-child(2)")).click();
+        WebElement pagina = navegador.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/h1"));
+        String mensagem = pagina.getText();
+        assertEquals("Listar Clientes", mensagem);
+
+
+        // Limpando a base
+        navegador.findElement(By.xpath("//*[@id=\"formListarCliente\"]/div/fieldset/div/div/div[4]/input")).click();
+        assertEquals("http://provaqa.marketpay.com.br:9089/desafioqa/listarCliente", navegador.getCurrentUrl());
+
+        navegador.findElement(By.xpath("//*[@id=\"formListarCliente\"]/div/fieldset/div/div/div[3]/input")).click();
+
+        //Capturar Screenshot
+        String screenshotArquivo = "/Users/erikl/Evd_teste/" + test.getMethodName() + Generator.DataHoraParaArquivo() + ".png";
+        ScreenShot.tirar(navegador, screenshotArquivo);
+
+    }
+
     @After
     public void fecharNavegador() {
         // Fechar o navegador

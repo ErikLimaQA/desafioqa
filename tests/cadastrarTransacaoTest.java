@@ -124,6 +124,10 @@ public class cadastrarTransacaoTest {
         //Capturar Screenshot
         String screenshotArquivo = "/Users/erikl/Evd_teste/" + test.getMethodName() + Generator.DataHoraParaArquivo() +".png";
         ScreenShot.tirar(navegador, screenshotArquivo);
+
+        //Saindo da Aplicação
+        navegador.findElement(By.cssSelector("input.btn.btn-primary[type='submit']")).click();
+
     }
 
 
